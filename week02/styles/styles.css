@@ -10,7 +10,7 @@ nav a {
   text-decoration: none;
   font-size: 1.2rem;
   font-weight: 700;
-  color: #fff; /% shorthand for white %/
+  color: #fff; 
 }
 
 
@@ -43,7 +43,7 @@ p {
 aside {
   width: 20rem;
   margin: 1rem;
-  border: 1px solid rgb(0 0 0 / 0.2); /* 1️⃣ */
+  border: 1px solid rgb(0 0 0 / 0.2);
   padding: 1rem;
   background-color: #eee;
   color: #333;

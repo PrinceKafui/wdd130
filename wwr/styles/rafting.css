@@ -175,6 +175,11 @@ left: 30rem;
   width: 14rem;
 }
 
+.adventure  h3 {
+  position: absolute;
+  left: 3rem;
+}
+
 
 footer {
   margin-top: 15px;

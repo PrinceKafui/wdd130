@@ -1,9 +1,9 @@
 /* Define CSS variables */
 :root {
-    --primary-color: #2A4B7C;
-    --secondary-color: #5B9BD5;
-    --accent1-color:#2A4B7C;
-    --accent2-color: #D4A373;
+    --primary-color: #505033;
+    --secondary-color: #264969;
+    --accent1-color:#CFCFB4;
+    --accent2-color: #B4CDE4;
 
     --heading-font: 'Oswald', sans-serif;
     --body-font: 'Open Sans', sans-serif;
@@ -16,7 +16,7 @@ body {
 
 h1, h2 {
   font-family: var(--heading-font);
-  color: var(--primary-color);
+  color: var(--secondary-color);
 }
 
 a { text-decoration: none;
@@ -29,7 +29,7 @@ header {
     display: grid;
     grid-template-columns: auto 1fr;
     align-items: center;
-    background-color: var(--primary-color);
+    background-color: var(--secondary-color);
     padding: 5px;
     border-radius: 10px;
     box-shadow: 0 2px 10px rgb(0, 0, 0, 0.1);
@@ -46,7 +46,7 @@ header {
 
 nav a{
   display: flex;
-  color: #fff;
+  color: var(--accent1-color);
   text-decoration: none;
   font-weight: bold;
   padding: 8px 16px;
@@ -77,6 +77,8 @@ header, main, footer {
 
 .hero img{
   width: 100%;
+  background: none;
+  border-radius: 5px;
 }
 
 .hero h1 {
@@ -84,7 +86,7 @@ header, main, footer {
   top: 1em;
   left: 30rem;
   text-decoration: solid;
-  color: white;
+  color: var(--accent1-color);
  
 
 }
@@ -136,11 +138,13 @@ header, main, footer {
 }
 
 .history .para1 {
+  color: var(--secondary-color);
   grid-area: para1;
   text-align: right;
 }
 
 .history .para2 {
+  color: var(--secondary-color);
   grid-area: para2;
   text-align: left;
 }
@@ -160,12 +164,14 @@ header, main, footer {
 }
 
 .adventure h2{
-position: relative;
-left: 30rem;
+ color: var(--secondary-color);
+ position: relative;
+ left: 30rem;
 
 }
 
 .adventure .picturerow  h3{
+  color: var(--secondary-color);
   position: relative;
   align-content: center;
 
@@ -182,6 +188,7 @@ left: 30rem;
 
 
 footer {
+  color: var(--secondary-color);
   margin-top: 15px;
   padding-top: 10px; 
   border-top: 1px solid #000;
@@ -193,4 +200,138 @@ footer {
   bottom: 55px;
   margin-top: 15px;
   justify-content: end;
+}
+
+
+/* Contact Page Specific Styles */
+
+.contact-header{
+  display: flex;
+  justify-content: center;
+}
+.contact-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1rem;
+}
+
+ label{
+   color: var(--secondary-color);
+   
+ }
+.contact-info, .team, .contact-form {
+    background-color: var(--accent1-color);
+    color: var(--secondary-color);
+    padding: 5rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.map {
+    margin-top: 1rem;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.map iframe {
+    width: 100%;
+    height: 300px;
+    border: none;
+}
+
+.team h2{
+  display: flex;
+  justify-content: center;
+
+}
+
+.employee-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    justify-content: center;
+    margin-top: 1rem;
+}
+
+.employee-gallery figure {
+    text-align: center;
+    flex: 1;
+    min-width: 200px;
+}
+
+.employee-gallery img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid #2c3e50;
+}
+
+.employee-gallery figcaption {
+    margin-top: 0.5rem;
+    font-weight: 600;
+    color: #2c3e50;
+}
+
+.form-group {
+    margin-bottom: 1.2rem;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+}
+
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group textarea {
+    width: 100%;
+    padding: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 1rem;
+}
+
+.radio-group {
+    margin: 0.5rem 0;
+}
+
+.submit-btn {
+    background-color: #3498db;
+    color: white;
+    border: none;
+    padding: 0.8rem 1.5rem;
+    border-radius: 4px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.submit-btn:hover {
+    background-color: #2980b9;
+}
+
+/* Responsive Layout */
+@media (min-width: 1600px) {
+    .contact-container {
+        grid-template-columns: 1fr 1fr;
+    }
+    
+    .team {
+        grid-column: span 2;
+    }
+}
+
+@media (min-width: 1600px) {
+    .contact-container {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+    
+    .team {
+        grid-column: span 3;
+    }
 }
